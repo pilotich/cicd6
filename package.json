@@ -1,0 +1,25 @@
+{
+    "type": "module",
+    "name": "heroes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start-clients": "node ./clients/clients.js 8000",
+        "start-orders": "node ./orders/orders.js 8001",
+        "start-items": "node ./items/items.js 8002"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.6.2",
+        "body-parser": "^1.20.1",
+        "express": "^4.18.2",
+        "mongoose": "^8.0.3"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    }
+}
