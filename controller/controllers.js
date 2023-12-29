@@ -9,14 +9,14 @@ import axios from "axios";
 export const createClient = async (req, res) => {
     try {
         const clientItem = new clientsModel({
-            clientName: req.body.contactName,
+            clientName: req.body.clientName,
             clientOrdersNum: req.body.clientOrdersNum,
             clientPoint: req.body.clientPoint,
         })
 
         const client = await clientItem.save();
         res.send({
-            message: "client has been successfuly created!"
+            message: "Client has been successfuly created!"
         });
     } catch (error) {
         console.log(error);
@@ -105,7 +105,7 @@ export const createOrder = async (req, res) => {
 
         const order = await orderItem.save();
         res.send({
-            message: "order has been successfuly created!"
+            message: "Order has been successfuly created!"
         });
     } catch (error) {
         console.log(error);
@@ -131,7 +131,7 @@ export const getOrder = async (req, res) => {
     try {
         const orderId = req.params.id;
         const order = await ordersModel.findOne({ _id: orderId, },)
-        res.json(orders);
+        res.json(order);
 
     } catch (error) {
         console.log(error);
