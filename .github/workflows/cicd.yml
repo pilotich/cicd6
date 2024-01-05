@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  test1:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,7 +17,7 @@ jobs:
       - run: npm install
       - run: npm run start-clients
       - run: npm test
-  test2:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
       - run: npm install
       - run: npm run start-orders
       - run: npm test
-  test3:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,7 +39,7 @@ jobs:
       - run: npm test
   
   deploy:
-    needs: test1, test2, test3
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Deploy on server
