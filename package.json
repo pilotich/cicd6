@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.js",
+    "test": "mocha test/**/*.js --exit",
     "start-clients": "node ./clients/clients.js 8000",
     "start-orders": "node ./orders/orders.js 8001",
     "start-items": "node ./items/items.js 8002"
