@@ -287,8 +287,11 @@ export const createOrderFromCollections = async(req, res) => {
             orderPrice: item.data.itemPrice,
             orderDate: Date(),
         })
-        const result = await ordersModel.find();
-        res.json(result);
+        const result = await ordersModel.findOne({})
+        res.send({
+            message: "Order has been created!"
+        });
+        //res.json(result);
     } catch (error) {
         console.log(error);
         res.status(500).json({
