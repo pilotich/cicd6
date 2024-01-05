@@ -26,6 +26,7 @@ const expect =  chai.expect
 }
 */
 
+const app = "http://localhost:8001/api"
 const appServer = app.callback();
 const orderId = '657cda3d1a124ad73c6ccca6'
 chai.use(chaiHttp);

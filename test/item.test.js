@@ -13,7 +13,7 @@ const expect =  chai.expect
   "itemQuantity": "26"
 }
 */
-
+const app = "http://localhost:8002/api"
 const appServer = app.callback();
 const itemId = '6578b8c4f7874af069d18ffb'
 chai.use(chaiHttp);
