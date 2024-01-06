@@ -1,7 +1,7 @@
 import chai from 'chai'
 import chaiHttp from 'chai-http'
 const expect =  chai.expect
-//const baseUrl = "http://localhost:8002/api"
+const baseUrl = "http://localhost:8002/api"
 
 /*
 {
@@ -14,7 +14,7 @@ const expect =  chai.expect
 }
 */
 const app = "http://localhost:8002/api"
-const appServer = app.callback();
+//const appServer = app.callback();
 const itemId = '6578b8c4f7874af069d18ffb'
 chai.use(chaiHttp);
 describe("Test", function(){
